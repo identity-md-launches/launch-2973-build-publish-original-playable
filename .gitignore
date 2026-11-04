@@ -1,0 +1,11 @@
+# Explicit path budget: generated dependencies/caches only, at any nesting level.
+**/node_modules/
+**/.npm/
+**/.cache/
+**/.vite/
+**/coverage/
+**/playwright-report/
+**/test-results/
+**/*.tsbuildinfo
+/test/scratch/
+# dist/ is a required delivery and is intentionally included.

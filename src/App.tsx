@@ -217,6 +217,7 @@ export default function App() {
             ? ((currentWheel.rpm * Math.PI * 2) / 60) * delta
             : 0)) %
         (Math.PI * 2);
+      if (game.kills < lastKills) lastKills = game.kills;
       if (game.kills > lastKills) {
         beep(440 + (game.kills % 4) * 60);
         lastKills = game.kills;

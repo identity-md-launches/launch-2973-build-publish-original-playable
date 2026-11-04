@@ -57,14 +57,14 @@ Body line-height is 1.5; headings use 1.2; the short brand title uses 1.0. Contr
 | --- | --- |
 | Above 1120px | Battlefield plus 270px build tools, separated by 24px |
 | At 1120px | Shell padding 24px; build tools 240px; gap 20px |
-| At 900px | One-column game; two build families alongside one another, three tools each; native quick selector replaces scene name; wave action moves below the map |
+| At 900px | One-column game; two build families alongside one another, three tools each; native quick selector replaces scene name; wave action moves below the map. From 461–900px the feed wraps, and the wheel reading keeps its full content width, letting block data and Retry move to another row when needed |
 | At 700px | Shell padding 18px; build families stack while each keeps three tools; secondary feed explanation is hidden |
 | At 460px | Shell padding 14px; 24px title; tighter HUD; two-column feed; offline retry occupies its own row; tutorial becomes a bottom sheet |
 | At 350px | Shell padding 10px; compact toolbar and feed; simulated label can wrap |
 
 The canvas remains 900×570 logical pixels at every width, preserving its side-on composition. `SLOTS` in `src/engine.ts` defines 16 tunnel-side plots; overlay buttons map coordinates to percentages. Their minimum target is 24×24px, with larger desktop targets. Primary buttons are at least 44px high; dense toolbar controls are smaller, with the probe’s comfort-size limitation recorded.
 
-On desktop the wave launch action sits in the scene toolbar, within the first screen. At 900px and below, the same action is below the scene; CSS displays one copy at a time. The phone’s quick selector keeps tower choice adjacent to placement. No fixed control obstructs the live battlefield during normal play. Layout was rendered at 320, 390, 768, 900 and 1440 CSS pixels; native zoom, physical devices and RTL mirroring were not verified.
+On desktop the wave launch action sits in the scene toolbar, within the first screen. At 900px and below, the same action is below the scene; CSS displays one copy at a time. The phone’s quick selector keeps tower choice adjacent to placement. No fixed control obstructs the live battlefield during normal play. The revision additionally checked the offline feed at 320, 350, 390, 460, 461, 480, 500, 520, 600, 700, 701, 768, 900, 901, 1120 and 1440 CSS pixels, with no text or progress-bar intersections. The compact grid at 460px and below is preserved. Native zoom, physical devices and RTL mirroring were not verified. See `artifacts/revision-validation.md` for revision evidence.
 
 ## Elevation & Depth
 

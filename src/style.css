@@ -2016,6 +2016,15 @@ footer p {
   margin-block-end: 15px;
   color: var(--color-muted);
 }
+@media (min-width: 461px) and (max-width: 900px) {
+  .wheel-feed {
+    flex-wrap: wrap;
+  }
+  .wheel-reading {
+    flex-shrink: 0;
+    min-width: max-content;
+  }
+}
 @media (max-width: 460px) {
   .wheel-feed {
     display: grid;
